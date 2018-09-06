@@ -719,7 +719,8 @@ class PluginFieldsContainer extends CommonDBTM {
          'Supplier'        => Supplier::getTypeName(2),
          'Contact'         => Contact::getTypeName(2),
          'Contract'        => Contract::getTypeName(2),
-         'Document'        => Document::getTypeName(2)
+         'Document'        => Document::getTypeName(2),
+         'Line'            => Line::getTypeName(2)
       ];
 
       $tabs[__('Tools')] = [
@@ -771,7 +772,7 @@ class PluginFieldsContainer extends CommonDBTM {
             );
          }
 
-         // Filter groupts that do not have items handled
+         // Filter groups that do not have items handled
          $tabs = array_filter(
             $tabs,
             function ($items) {
